@@ -9,3 +9,4 @@ terraform.tfvars
 # OS/editor
 .DS_Store
 .vscode/
+desktop.ini

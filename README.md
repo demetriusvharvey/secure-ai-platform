@@ -22,3 +22,31 @@ Elastic IP
 RKE2 Kubernetes Cluster
     ↓
 NGINX Deployment + NodePort Service
+
+## Phase 2 Progress
+
+### Kubernetes Platform
+- Installed Helm
+- Installed Argo CD via Helm
+- Created the `argocd` namespace
+- Verified all Argo CD components are healthy
+- Retrieved the initial admin password
+- Prepared the cluster for GitOps deployments
+
+### Current Architecture
+
+GitHub
+↓
+Terraform
+↓
+AWS
+↓
+Ubuntu
+↓
+RKE2
+↓
+Kubernetes
+↓
+Helm
+↓
+Argo CD
