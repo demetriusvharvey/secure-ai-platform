@@ -1,41 +1,24 @@
-# Secure AI Platform
+# Secure RKE2 Kubernetes Platform on AWS
 
-## Overview
+This project provisions AWS infrastructure with Terraform and deploys a secure RKE2 Kubernetes cluster on Ubuntu EC2.
 
-This project is my long-term engineering portfolio focused on designing, building, automating, and securing modern cloud and AI infrastructure.
+## Current Architecture
 
-Rather than creating isolated labs, this repository evolves into a production-style platform demonstrating real-world engineering and security practices.
-
-## Technologies
-
-- AWS
-- Terraform
-- Kubernetes (EKS)
-- Docker
-- GitHub Actions
-- Python
-- FastAPI
-- Amazon Bedrock
-- IAM
-- KMS
-- AWS Security Hub
-- Amazon GuardDuty
-- AWS CloudTrail
-- Secrets Manager
-- Trivy
-- Prometheus
-- Grafana
-
-## Goals
-
-- Build enterprise-grade AWS infrastructure
-- Deploy secure Kubernetes workloads
-- Implement DevSecOps pipelines
-- Secure AI workloads
-- Apply CISSP security architecture principles
-- Demonstrate cloud security engineering best practices
-- Document architecture and design decisions
-
-## Status
-
-🚧 Currently under active development.
+```text
+GitHub Repo
+    ↓
+Terraform
+    ↓
+AWS VPC
+    ↓
+Public Subnet + Internet Gateway + Route Table
+    ↓
+Security Group
+    ↓
+Ubuntu EC2 Instance
+    ↓
+Elastic IP
+    ↓
+RKE2 Kubernetes Cluster
+    ↓
+NGINX Deployment + NodePort Service
